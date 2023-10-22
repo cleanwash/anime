@@ -7,25 +7,38 @@ new Anime(선택자, {변경할 속성객체},{duration:시간값,easeType: 가�
 left, top, width, height, opacity, scroll, 
 
 */
+// btn.addEventListener('click', () => {
+// 	new Anime(
+// 		box,
+// 		{ left: '80%', height: 200 },
+// 		{
+// 			duration: 500,
+// 			easeType: 'linear',
+// 			callback: () => {
+// 				new Anime(
+// 					box,
+// 					{ background: '##ff69b4' },
+// 					{
+// 						duration: 200,
+// 						callback: () => {
+// 							new Anime(box, { opacity: 0 });
+// 						},
+// 					}
+// 				);
+// 			},
+// 		}
+// 	);
+// });
 
 btn.addEventListener('click', () => {
 	new Anime(
-		box,
-		{ left: '80%', height: 200 },
+		window,
+		{ scroll: 3000 },
 		{
-			duration: 500,
+			duration: 1000,
 			easeType: 'linear',
 			callback: () => {
-				new Anime(
-					box,
-					{ background: '##ff69b4' },
-					{
-						duration: 200,
-						callback: () => {
-							new Anime(box, { opacity: 0 });
-						},
-					}
-				);
+				new Anime(window, { scroll: 1000 }, { duration: 600, easeType: 'ease1' });
 			},
 		}
 	);
